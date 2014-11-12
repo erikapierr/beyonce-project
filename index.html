@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<!-- Apple Touch Icons -->
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="60x60" href="img/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+	<!-- Windows 8 Tile Icons -->
+    	<meta name="msapplication-square70x70logo" content="img/smalltile.png" />
+	<meta name="msapplication-square150x150logo" content="img/mediumtile.png" />
+	<meta name="msapplication-wide310x150logo" content="img/widetile.png" />
+	<meta name="msapplication-square310x310logo" content="img/largetile.png" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300|Source+Sans+Pro|Titillium+Web:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/stylesheet-beyonce.css">
+	<meta charset="UTF-8">
+	<title>beyoncé finder || the BeyoncAPI project</title>
+</head>
+<body>
+<div class="wrapper">
+	<div class="video-container">
+		<video muted autoplay loop id="beyoncevideo" preload="auto">
+		  <source src="xo.mp4">
+		</video>
+	</div>
+	<div class="content-container">
+	<div class="header-container">
+		<header>
+			<h1>
+				is Beyoncé coming?
+			</h1>
+			<h2>
+				Find out! Enter your location below...
+			</h2>
+			<form action="#" id="location-form">
+					<input type="text" class="location" name="location" placeholder="For example: city, province/state">
+					<input id="submit-button" type="submit" value="Find out!">
+				</form>
+		</header>
+		</div>
+		<div id="response" class="bandsintown-content">
+			<div class="option is-bey-touring">
+<!-- 				<h2>
+					Is Beyoncé touring near you? Find out!
+				</h2>
+ -->				<p class="invalid-entry">Sorry! That's not a valid entry. Please try again.</p>
+			</div>
+			<div class="option bey-in-town">
+				Beyoncé is in <span class="bey-in-town-location"></span>! 
+				<div class="clock-box">
+					<p class="clock"></p>
+					<p class="clock-after">until <span class="your-artist"></span> arrives!</p>
+				</div>
+				<div class="buy-tickets">
+					<h3>
+						<a href="#" target="_blank">Buy tickets now!</a>
+					</h3>
+				</div>
+			</div>
+			<div class="option bey-not-in-town">
+				<h2>
+					<span class="sorry">Sorry! </span>Beyoncé is not coming to your city any time soon.
+				</h2> 
+				<h3>
+					Maybe you would be interested in... 
+				</h3>
+				<div class="new-artist-box">
+					<div class="new-artist">
+						<a href="#">
+							<img src="" alt="">
+							<p>
+								Artist Information. 
+							</p>
+						</a>
+					</div>
+					<div class="new-artist">
+						<a href="#">
+							<img src="" alt="">
+							<p>
+								Artist Information. 
+							</p>
+						</a>
+					</div>
+					<div class="new-artist">
+						<a href="#">
+							<img src="" alt="">
+							<p>
+								Artist Information. 
+							</p>
+						</a>
+					</div>
+				</div> <!-- /.new-artist-box -->
+			</div>
+			<div class="option other-not-in-town">
+				<h2>
+					<span class="sorry">Sorry!</span> <span class="your-artist"></span> isn't touring near you either.
+				</h2>
+				<h3>
+					Maybe you would be interested in... 
+				</h3>
+				<div class="new-artist-box">
+					<div class="new-artist">
+						<a href="#">
+							<img src="" alt="">
+							<p>
+								Artist Information. 
+							</p>
+						</a>
+					</div>
+					<div class="new-artist">
+						<a href="#">
+							<img src="" alt="">
+							<p>
+								Artist Information. 
+							</p>
+						</a>
+					</div>
+					<div class="new-artist">
+						<a href="#">
+							<img src="" alt="">
+							<p>
+								Artist Information. 
+							</p>
+						</a>
+					</div>
+				</div><!-- /.new-artist-box -->
+			</div>
+			<div class="option other-in-town">
+				<h2><span class="your-artist"></span></h2>
+				<p> is performing on </p>
+				<p><span class="concert-date"></span>.</p>
+				<div class="clock-box">
+					<p class="clock"></p>
+					<p class="clock-after">until <span class="your-artist"></span> arrives!</p>
+				</div>
+				<div class="buy-tickets">
+					<h3>
+						<a href="#" target="_blank">Buy tickets now!</a>
+					</h3>
+				</div>
+			</div> <!-- /.other-in-town -->
+		</div> <!-- /.bandsintown-content -->
+		<footer class="clearfix">
+			&copy; <a href="http://erikapierre.com">erika pierre</a> 2014
+		</footer>
+		</div><!-- /.content-container -->
+	</div> <!-- /.wrapper -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/jquery.countdown.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
