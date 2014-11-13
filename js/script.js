@@ -8,10 +8,9 @@ var bandsWidget = {
 		$("#submit-button").on('click', function(e){
 			e.preventDefault();
 	        bandsWidget.location = $('.location').val();
-	    	//$(this).unbind('click');
 	    	bandsWidget.artist="Beyonce";
 	    	bandsWidget.makeRequest();
-
+	    	$("html, body").animate({ scrollTop: $('#response').height() }, 750);
     	});
 	},
 	makeRequest: function(){
@@ -169,12 +168,12 @@ var lastfmWidget = {
 $(document).ready(function(){
 	bandsWidget.init();
 	lastfmWidget.init();
-	var headerHeight = $('.header-container').css('height');
-	$('.video-container').css({
-		'height': headerHeight,
-		overflowY: 'hidden'
-	});
-	var videoHeight = $('.video-container').css('height');
-	$('.header-container').css('height', videoHeight);
+	// var headerHeight = $('.header-container').css('height');
+	// $('.video-container').css({
+	// 	'height': headerHeight,
+	// 	overflowY: 'hidden'
+	// });
+	// var videoHeight = $('.video-container').css('height');
+	// $('.header-container').css('height', videoHeight);
 	// $("video").prop('muted', true);
 });
