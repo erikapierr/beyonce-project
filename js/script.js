@@ -2,15 +2,26 @@
 var bandsWidget = {
 	artist: 'Beyonce',
 	response: [],
-
+	clickOrEnter: function() {
+    	$("html, body").animate({ 
+    		scrollTop: $('#response').offset().top
+    	}, 750);
+        bandsWidget.location = $('.location').val();
+    	bandsWidget.artist="Beyonce";
+    	bandsWidget.makeRequest();
+	},
 	//initializer function
 	init: function(artist) {
-		$("#submit-button").on('click', function(e){
+		$('#submit-button').on('click', function(e){
 			e.preventDefault();
-	        bandsWidget.location = $('.location').val();
-	    	bandsWidget.artist="Beyonce";
-	    	bandsWidget.makeRequest();
-	    	$("html, body").animate({ scrollTop: $('#response').height() }, 750);
+			bandsWidget.clickOrEnter();
+    	});
+    	$('#submit-button').keypress(function(e){
+    		$('#submit-button').blur();
+    		if (e==13) {
+	   			e.preventDefault();
+	    		bandsWidget.clickOrEnter();
+    		}
     	});
 	},
 	makeRequest: function(){
@@ -134,13 +145,13 @@ var lastfmWidget = {
 	//choose new artist and reinitialize bandsWidget
 	tryAgain: function(){
 		var currentArtist= $('.new-artist').find('a');
-		currentArtist.on('click', function() {
+		currentArtist.on('click', function(e) {
+			e.preventDefault();
 			lastfmWidget.artistToSearch = $(this).text();
 			bandsWidget.artist = $(this).text();
 			bandsWidget.makeRequest();
 			lastfmWidget.loadNewArtists();
 			$('.your-artist').text(bandsWidget.artist);
-			
 		});
 	},
 //load date/time/url for chosen artist
@@ -168,12 +179,4 @@ var lastfmWidget = {
 $(document).ready(function(){
 	bandsWidget.init();
 	lastfmWidget.init();
-	// var headerHeight = $('.header-container').css('height');
-	// $('.video-container').css({
-	// 	'height': headerHeight,
-	// 	overflowY: 'hidden'
-	// });
-	// var videoHeight = $('.video-container').css('height');
-	// $('.header-container').css('height', videoHeight);
-	// $("video").prop('muted', true);
 });

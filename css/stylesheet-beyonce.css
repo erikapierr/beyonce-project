@@ -213,7 +213,6 @@ h3 {
   top: 0;
   z-index: 1;
   width: 100%;
-  background: url("../img/XO.jpg");
   font-size: 0;
   overflow-Y: hidden;
 }
@@ -221,6 +220,7 @@ h3 {
 video {
   z-index: 2;
   width: 100%;
+  height: auto;
   display: inline-block;
 }
 
@@ -231,14 +231,30 @@ video {
 
 .header-container {
   background: #7B46B4;
-  padding: 100px 25px 100px 25px;
+  padding: 100px 25px;
   text-outline: 0;
+}
+@media all and (max-height: 390px) {
+  .header-container {
+    padding: 50px 25px;
+  }
+}
+@media all and (max-width: 650px) {
+  .header-container {
+    padding: 0;
+  }
 }
 
 .header-container,
 .bandsintown-content {
   width: 100%;
   margin: 0;
+}
+@media all and (max-width: 640px) {
+  .header-container,
+  .bandsintown-content {
+    font-size: 24px;
+  }
 }
 
 .option {
@@ -253,6 +269,11 @@ video {
 .bandsintown-content {
   padding: 25px 100px;
   background: #fff;
+}
+@media all and (max-width: 600px) {
+  .bandsintown-content {
+    padding: 10px 40px;
+  }
 }
 
 .tumblr-content,
@@ -269,6 +290,11 @@ video {
 
 .bandsintown-content h2 {
   font-size: 30px;
+}
+@media all and (max-width: 440px) {
+  .bandsintown-content h2 {
+    font-size: 24px;
+  }
 }
 
 .tumblr-content {
@@ -299,10 +325,27 @@ header h1 {
 header h1:hover, header h1:focus {
   color: #BAE;
 }
+@media all and (max-height: 390px) {
+  header h1 {
+    margin-top: 0;
+  }
+}
+@media all and (max-width: 615px) {
+  header h1 {
+    font-size: 52px;
+  }
+}
 header h2 {
   margin-top: 0;
   font-weight: 300;
   margin-bottom: 2.5rem;
+  font-size: 24px;
+}
+@media all and (max-width: 515px) {
+  header h2 {
+    margin-bottom: 0;
+    font-size: 18px;
+  }
 }
 header input[type="text"] {
   width: 40%;
@@ -310,11 +353,38 @@ header input[type="text"] {
   text-transform: uppercase;
   font-family: 'courier new', 'source sans pro', sans-serif;
 }
+@media all and (max-width: 1140px) {
+  header input[type="text"] {
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 905px) {
+  header input[type="text"] {
+    font-size: 12px;
+    width: 60%;
+  }
+}
+@media all and (max-width: 490px) {
+  header input[type="text"] {
+    width: 80%;
+  }
+}
+@media all and (max-width: 400px) {
+  header input[type="text"] {
+    width: 95%;
+  }
+}
 header input {
   display: block;
   margin: 0.5rem auto;
   padding: 8px;
   font-size: 20px;
+}
+@media all and (max-width: 905px) {
+  header input[type="submit"] {
+    font-size: 15px;
+    padding: 2px;
+  }
 }
 
 .bey-in-town,
@@ -343,6 +413,12 @@ header input {
 .other-not-in-town .new-artist-box {
   display: flex;
 }
+@media all and (max-width: 640px) {
+  .bey-not-in-town .new-artist-box,
+  .other-not-in-town .new-artist-box {
+    display: block;
+  }
+}
 .bey-not-in-town .new-artist,
 .other-not-in-town .new-artist {
   width: 31%;
@@ -361,6 +437,14 @@ header input {
 .other-not-in-town .new-artist img:focus {
   opacity: 0.3;
 }
+@media all and (max-width: 640px) {
+  .bey-not-in-town .new-artist,
+  .other-not-in-town .new-artist {
+    float: none;
+    width: 80%;
+    margin: 0 auto 1em auto;
+  }
+}
 .bey-not-in-town p,
 .other-not-in-town p {
   text-align: center;
@@ -377,6 +461,9 @@ header input {
   font-variant: small-caps;
 }
 
+.buy-tickets {
+  padding-top: 2rem;
+}
 .buy-tickets p {
   margin: 50px 0 25px 0;
 }
@@ -394,6 +481,20 @@ header input {
 .bey-in-town h3 {
   text-align: center;
   padding: 10px;
+}
+@media all and (max-width: 640px) {
+  .other-in-town h2,
+  .other-in-town h3,
+  .bey-in-town h3 {
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 440px) {
+  .other-in-town h2,
+  .other-in-town h3,
+  .bey-in-town h3 {
+    font-size: 16px;
+  }
 }
 
 .other-in-town h2 {
