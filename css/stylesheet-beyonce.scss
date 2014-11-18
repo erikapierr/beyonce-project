@@ -30,7 +30,7 @@ a {
 p {
 	font-size: 18px;
 }
-
+		
 h3 {
 	font-size: 24px;
 }
@@ -57,6 +57,9 @@ h3 {
 	width: 100%;
 	font-size: 0;
 	overflow-Y: hidden;
+	@media only screen and (max-device-width : 736px) {
+	   display:none;
+	}
 }
 
 video {
@@ -78,9 +81,15 @@ video {
 	@media all and (max-height: 390px) {
 		padding: 50px 25px;
 	}
-	@media all and (max-width: 650px) {
+	@media all and (max-width: 700px) {
 		padding: 0;
 	}
+	@media only screen and (max-device-width : 736px) {
+	   background-image: url("../img/XO.png");
+	   background-size: cover;
+	   overflow: hidden;
+	   height:50vh;
+    }
 }
 .header-container,
 .bandsintown-content{
@@ -105,6 +114,9 @@ video {
 	background:#fff;
 	@media all and (max-width: 600px) {
 		padding: 10px 40px;
+	}
+	@media only screen and (max-device-width : 736px) {
+		min-height:50vh;
 	}
 }
 
@@ -245,7 +257,7 @@ video {
 				opacity: 0.3;
 			}
 		}
-		@media all and (max-width: 640px) {
+		@media screen and (max-device-width: 736px) {
 			float: none;
 			width: 80%;
 			margin: 0 auto 1em auto;

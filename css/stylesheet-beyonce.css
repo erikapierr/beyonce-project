@@ -216,6 +216,11 @@ h3 {
   font-size: 0;
   overflow-Y: hidden;
 }
+@media only screen and (max-device-width: 736px) {
+  .video-container {
+    display: none;
+  }
+}
 
 video {
   z-index: 2;
@@ -239,9 +244,17 @@ video {
     padding: 50px 25px;
   }
 }
-@media all and (max-width: 650px) {
+@media all and (max-width: 700px) {
   .header-container {
     padding: 0;
+  }
+}
+@media only screen and (max-device-width: 736px) {
+  .header-container {
+    background-image: url("../img/XO.png");
+    background-size: cover;
+    overflow: hidden;
+    height: 50vh;
   }
 }
 
@@ -273,6 +286,11 @@ video {
 @media all and (max-width: 600px) {
   .bandsintown-content {
     padding: 10px 40px;
+  }
+}
+@media only screen and (max-device-width: 736px) {
+  .bandsintown-content {
+    min-height: 50vh;
   }
 }
 
@@ -437,7 +455,7 @@ header input {
 .other-not-in-town .new-artist img:focus {
   opacity: 0.3;
 }
-@media all and (max-width: 640px) {
+@media screen and (max-device-width: 736px) {
   .bey-not-in-town .new-artist,
   .other-not-in-town .new-artist {
     float: none;
