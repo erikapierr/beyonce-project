@@ -26,13 +26,14 @@
 <div class="wrapper">
 	<div class="video-container">
 		<video muted autoplay loop id="beyoncevideo" preload="auto" poster="img/XO.png">
-		  <source src="xo.webm" type="video/webm">
 		  <source src="xo.mp4" type="video/mp4">
+		  <source src="xo.webm" type="video/webm">
+		  <source src="xo.ogg" type="video/ogg">
 		</video>
 	</div>
 	<div class="content-container">
 	<div class="header-container">
-		<header>
+		<header role="banner">
 			<h1>
 				is Beyoncé coming?
 			</h1>
@@ -45,7 +46,7 @@
 				</form>
 		</header>
 		</div>
-		<div id="response" class="bandsintown-content">
+		<div id="response" class="bandsintown-content" role="main">
 			<div class="option is-bey-touring">
 				<p class="invalid-entry">Sorry! That's not a valid entry. Please try again.</p>
 			</div>
@@ -63,11 +64,8 @@
 			</div>
 			<div class="option bey-not-in-town">
 				<h2>
-					<span class="sorry">Sorry! </span>Beyoncé is not coming to your city any time soon.
+					Sorry! Beyoncé is not coming to your city any time soon. Maybe you would be interested in... 
 				</h2> 
-				<h3>
-					Maybe you would be interested in... 
-				</h3>
 				<div class="new-artist-box">
 					<div class="new-artist">
 						<a href="#">
@@ -97,11 +95,8 @@
 			</div>
 			<div class="option other-not-in-town">
 				<h2>
-					<span class="sorry">Sorry!</span> <span class="your-artist"></span> isn't touring near you either.
+					Sorry! <span class="your-artist"></span> isn't touring near you either. Maybe you would be interested in... 
 				</h2>
-				<h3>
-					Maybe you would be interested in... 
-				</h3>
 				<div class="new-artist-box">
 					<div class="new-artist">
 						<a href="#">
@@ -144,7 +139,7 @@
 				</div>
 			</div> <!-- /.other-in-town -->
 		</div> <!-- /.bandsintown-content -->
-		<footer class="clearfix">
+		<footer class="clearfix" role="contentinfo">
 			&copy; <a href="http://erikapierre.com">erika pierre</a> 2014
 		</footer>
 		</div><!-- /.content-container -->

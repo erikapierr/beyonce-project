@@ -2,10 +2,16 @@
 var bandsWidget = {
 	artist: 'Beyonce',
 	response: [],
+	toTop: function() {
+		$("html, body").animate({ 
+			scrollTop: $('#response').offset().top
+		}, 750);
+	},
 	clickOrEnter: function() {
-    	$("html, body").animate({ 
-    		scrollTop: $('#response').offset().top
-    	}, 750);
+    	// $("html, body").animate({ 
+    	// 	scrollTop: $('#response').offset().top
+    	// }, 750);
+		bandsWidget.toTop();
         bandsWidget.location = $('.location').val();
     	bandsWidget.artist="Beyonce";
     	bandsWidget.makeRequest();
@@ -147,6 +153,7 @@ var lastfmWidget = {
 		var currentArtist= $('.new-artist').find('a');
 		currentArtist.on('click', function(e) {
 			e.preventDefault();
+			bandsWidget.toTop();
 			lastfmWidget.artistToSearch = $(this).text();
 			bandsWidget.artist = $(this).text();
 			bandsWidget.makeRequest();
